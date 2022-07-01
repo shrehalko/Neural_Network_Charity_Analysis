@@ -27,7 +27,7 @@ Alphabet Soup is a non-profit philanthropic organization dedicated to helping or
 My job is to analyze the impact of each donation and vet potential receipients. This helps ensure that the foundations money is being used effectively. Unfortunately not every donation the company makes is impactful. In some cases an organization will take the money and disappear. As a result, my job is to predict which organizations are worth donating to and which are too high risk. We need to create a mathematical, data driven solution that can do this accurately. 
 For this pupose I am using a **Artificial Neural Network or ANN**. This model will evaluate all types of input data and produce a clear decision making result. While using **Python TensorFlow library**, we will try to test and optimize the model. This model will help us decide which organizations should receive donations.
  
-### <a name="results"></a>Results
+## <a name="results"></a>Results
 
 ### <a name="preprocessing"></a>Data Preprocessing
 
@@ -58,8 +58,8 @@ While doing the preprocessing I removed 2 variables from the dataset. They are "
 - The next step is to split the preprocessed data into a train and test dataset.
 - Finally, I scaled the train dataset using Standard Scalar.  
 
-<p align="center"> <img style="border:5px solid black;" src = "Images/encoded.png" width ="40%" "> </p>  
-<p align="center"> **Snapshot of dataset after One Hot Encoding** </p> 
+<p align="center"> <img style="border:5px solid black;" src = "Images/encoded.png" width ="90%" "> </p>  
+<p align="center"> Snapshot of dataset after One Hot Encoding</p> 
 
 ### <a name="evaluating"></a> Compiling, Training, and Evaluating the Model
 
@@ -71,13 +71,13 @@ While doing the preprocessing I removed 2 variables from the dataset. They are "
 * The **Loss function** used on the output layer is - **Binary crossentropy** as this is a binary classification problem.
 * Also, I used 100 epochs to train my model and got an accuracy score of **72%** and a loss of **0.56**
 
-<p align="center"> <img style="border:5px solid black;" src = "Images/model.png" width ="40%" "> </p>  
-<p align="center"> **Defining the Model and its layers** </p>  
+<p align="center"> <img style="border:5px solid black;" src = "Images/model.png" width ="80%"> </p>  
+<p align="center"> Defining the Model and its layers </p>  
 
 Accuracy achieved - 72% 
 
-<p align="center"> <img style="border:5px solid black;" src = "Images/accuracy1.png" width ="40%" "> </p>  
-<p align="center"> **Accuracy score - Before optimization** </p> 
+<p align="center"> <img style="border:5px solid black;" src = "Images/accuracy1.png" width ="80%"> </p>  
+<p align="center"> Accuracy score - Before optimization </p> 
 
 ### <a name="optimize"></a> Optimizing the Model
 
@@ -88,13 +88,13 @@ In order to optimize the model I did the following:
 * "APPLICATION_TYPE" and "CLASSIFICATION" columns were binned as before. 
 * In order to optimize the model I have used the Keras Tuner to decide on the number of hidden layers, number of neurons and the activation function for each layer.
 
-<p align="center"> <img style="border:5px solid black;" src = "Images/tuner.png" width ="40%" "> </p>  
-<p align="center"> **Code for tuning the model using KerasTuner** </p> 
+<p align="center"> <img style="border:5px solid black;" src = "Images/tuner.png" width ="80%" "> </p>  
+<p align="center"> Code for tuning the model using KerasTuner </p> 
 
 * After tuning the model, I was able to achieve an accuracy score of 79%.
 
-<p align="center"> <img style="border:5px solid black;" src = "Images/accuracy_optimized.png" width ="40%" "> </p>  
-<p align="center"> **Accuracy score - After optimization** </p> 
+<p align="center"> <img style="border:5px solid black;" src = "Images/accuracy_optimized.png" width ="80%" "> </p>  
+<p align="center"> Accuracy score - After optimization </p> 
 
 
 ## <a name="Summary"></a>Analysis Summary
